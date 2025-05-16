@@ -5,8 +5,7 @@ import router from '@/router'
 
 // 创建axios实例
 const service = axios.create({
-  // 优先使用环境变量中的API URL，如果不存在，则使用Railway URL或开发环境URL
-  baseURL: process.env.VUE_APP_API_URL || 'https://eventgraphtotext-backend-production.up.railway.app',
+  baseURL: process.env.VUE_APP_API_URL || 'http://localhost:8080',
   timeout: 120000  // 增加到120秒（两分钟）
 })
 
